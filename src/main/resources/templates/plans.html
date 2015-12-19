@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <title>plans</title>
+    <link rel="stylesheet" href="@{/css/gtvg.css}" />
+  </head>
+  <body>
+    <div>
+      <div>plans</div>
+      <div th:each="plan : ${plans}" th:object="${plan}">
+        <span th:text="*{{date}}"></span>
+        <span>
+          <a th:href="@{/web/plans/{id}(id=*{id})}" th:text="*{title}"></a>
+        </span>
+      </div>
+    </div>
+    <div>
+      <form method="POST">
+        <div>date:<input name="date" type="text" placeholder="yyyy/MM/dd"/></div>
+        <div>title:<input name="title" type="text"/></div>
+        <input type="submit"/>
+      </form>
+    </div>
+  </body>
+</html>

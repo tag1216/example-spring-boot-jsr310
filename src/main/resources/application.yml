@@ -1,0 +1,14 @@
+
+spring.jpa:
+  show-sql: true
+
+logging.level:
+  examples: debug
+
+# LocalDateには効かない
+#spring.jackson.date-format: yyyy/MM/dd
+
+# LocalDateには効かない
+#spring.mvc.date-format: yyyy/MM/dd
+
+
